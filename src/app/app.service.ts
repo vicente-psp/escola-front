@@ -11,7 +11,7 @@ export enum Page {
 })
 export class AppService {
 
-  public pageActive = Page.FREQUENCIA;
+  public pageActive = Page.ALUNO;
   public page = Page;
 
   constructor() { }
