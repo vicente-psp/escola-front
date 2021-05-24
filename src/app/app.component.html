@@ -19,15 +19,19 @@
     </div>
   </div>
 </nav>
+<div class="image-custom" style="height: 100%;">
+  <div style="background-color: #ececec9c;">
+    <container-element [ngSwitch]="appService.pageActive">
+      <some-element *ngSwitchCase="appService.page.ALUNO">
+        <app-aluno></app-aluno>
+      </some-element>
+      <some-element *ngSwitchCase="appService.page.AVALIACAO">
+        <app-avaliacao></app-avaliacao>
+      </some-element>
+      <some-element *ngSwitchCase="appService.page.FREQUENCIA">
+        <app-frequencia></app-frequencia>
+      </some-element>
+    </container-element>
+  </div>
+</div>
 
-<container-element [ngSwitch]="appService.pageActive">
-  <some-element *ngSwitchCase="appService.page.ALUNO">
-    <app-aluno></app-aluno>
-  </some-element>
-  <some-element *ngSwitchCase="appService.page.AVALIACAO">
-    <app-avaliacao></app-avaliacao>
-  </some-element>
-  <some-element *ngSwitchCase="appService.page.FREQUENCIA">
-    <app-frequencia></app-frequencia>
-  </some-element>
-</container-element>
