@@ -6,7 +6,7 @@
 
 <mat-card style="width: 100%; margin-top: 15px;">
   <div class="row">
-    <div class="col-sm-4 col-md-4">
+    <div class="col-md-12">
       <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Aluno</mat-label>
         <mat-select [(value)]="frequenciaService.entity.aluno">
@@ -16,7 +16,10 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="col-sm-4 col-md-4">
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
       <mat-form-field appearance="outline" style="width: 100%;">
         <mat-label>Ano letivo</mat-label>
         <mat-select [(value)]="frequenciaService.entity.anoLetivo">
@@ -26,8 +29,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-
-    <div class="col-sm-4 col-md-4" >
+    <div class="col-md-6" >
       <mat-checkbox class="example-section"
        [(ngModel)]="frequenciaService.entity.presenca">
         Aluno presente?
@@ -39,7 +41,9 @@
 
   <div class="row" style="margin-top: 15px;">
     <div class="col-md-12" style="text-align: right;">
-      <button mat-mini-fab color="primary" (click)="saveEntity()">
+      <button mat-mini-fab color="primary"
+       (click)="saveEntity()"
+       matTooltip="Salvar frequência">
         <mat-icon>save</mat-icon>
       </button>
     </div>

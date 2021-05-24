@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { FrequenciaRoutingModule } from './frequencia-routing.module';
 import { FrequenciaComponent } from './frequencia.component';
@@ -38,6 +39,7 @@ import { FrequenciaComponent } from './frequencia.component';
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatTooltipModule,
   ]
 })
 export class FrequenciaModule { }
