@@ -1,0 +1,47 @@
+<div class="row mb-2">
+  <div class="col-md-12">
+    <h1 class="h2" style="margin: 10px 15px;"> Frequências </h1>
+  </div>
+</div>
+
+<mat-card style="width: 100%; margin-top: 15px;">
+  <div class="row">
+    <div class="col-sm-4 col-md-4">
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Aluno</mat-label>
+        <mat-select [(value)]="frequenciaService.entity.aluno">
+          <mat-option [value]="aluno" *ngFor="let aluno of listaAlunos">
+            {{ aluno.nome }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-4 col-md-4">
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Ano letivo</mat-label>
+        <mat-select [(value)]="frequenciaService.entity.anoLetivo">
+          <mat-option [value]="anoLetivo.name" *ngFor="let anoLetivo of listaAnoLetivo">
+            {{ anoLetivo.description }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-sm-4 col-md-4" >
+      <mat-checkbox class="example-section"
+       [(ngModel)]="frequenciaService.entity.presenca">
+        Aluno presente?
+      </mat-checkbox>
+    </div>
+  </div>
+
+  <mat-divider></mat-divider>
+
+  <div class="row" style="margin-top: 15px;">
+    <div class="col-md-12" style="text-align: right;">
+      <button mat-mini-fab color="primary" (click)="saveEntity()">
+        <mat-icon>save</mat-icon>
+      </button>
+    </div>
+  </div>
+</mat-card>
