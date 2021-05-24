@@ -22,7 +22,7 @@ export class AvaliacaoPesoService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public listarFrequencia(): Observable<Array<AvaliacaoPeso>> {
+  public listarAvaliacoesPeso(): Observable<Array<AvaliacaoPeso>> {
     return this.httpClient.get<Array<AvaliacaoPeso>>(this.API_URL);
   }
 
